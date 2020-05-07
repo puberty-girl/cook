@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "203497171391",
+    "firebase_url": "https://cook1-c5e22.firebaseio.com",
+    "project_id": "cook1-c5e22",
+    "storage_bucket": "cook1-c5e22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203497171391:android:d57c3e4d284347346e190a",
+        "android_client_info": {
+          "package_name": "com.example.cook1_0"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203497171391-umlh3a8ano8qpvjpibb0hj7eclbeb0no.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb5D4G9jZAY9ocXoYvYFLI2fui0Vudf98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203497171391-umlh3a8ano8qpvjpibb0hj7eclbeb0no.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203497171391:android:2592905dc0172d696e190a",
+        "android_client_info": {
+          "package_name": "com.example.cook2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203497171391-fik5246mdm44p49jisspaspkqtlamgu2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cook2",
+            "certificate_hash": "027462b3ee9888a2c19dc7569da1245f881e302e"
+          }
+        },
+        {
+          "client_id": "203497171391-umlh3a8ano8qpvjpibb0hj7eclbeb0no.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb5D4G9jZAY9ocXoYvYFLI2fui0Vudf98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203497171391-umlh3a8ano8qpvjpibb0hj7eclbeb0no.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

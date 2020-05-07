@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity">
+    <TableRow
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/what_cook"
+            android:layout_width="197dp"
+            android:layout_height="120dp"
+            android:text="Что приготовить"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <Button
+            android:id="@+id/salads"
+            android:layout_width="208dp"
+            android:layout_height="120dp"
+            android:text="Салаты"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="78dp" />
+    </TableRow>
+    <TableRow android:padding="5dp">
+
+        <Button
+            android:id="@+id/soups"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:text="Супы"
+            tools:layout_editor_absoluteX="244dp"
+            tools:layout_editor_absoluteY="78dp" />
+
+        <Button
+            android:id="@+id/starters"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:text="Завтраки"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/main_dishes"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:text="Горячее"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="279dp" />
+
+        <Button
+            android:id="@+id/deserts"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:text="Десерты"
+            tools:layout_editor_absoluteX="250dp"
+            tools:layout_editor_absoluteY="294dp" />
+    </TableRow>
+
+    <TableRow android:padding="5dp">
+
+        <Button
+            android:id="@+id/beverages"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:text="Напитки"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="389dp" />
+
+        <Button
+            android:id="@+id/bakery"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:text="Выпечка"
+            tools:layout_editor_absoluteX="246dp"
+            tools:layout_editor_absoluteY="389dp" />
+    </TableRow>
+</TableLayout>
+
+
