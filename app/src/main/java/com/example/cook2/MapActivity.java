@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.cook2.Models.Recycler;
+
 public class MapActivity extends AppCompatActivity {
 
     Button what_cook;
@@ -30,6 +32,7 @@ public class MapActivity extends AppCompatActivity {
         deserts = findViewById(R.id.deserts);
         beverages = findViewById(R.id.beverages);
         bakery = findViewById(R.id.bakery);
+
         what_cook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,49 +43,49 @@ public class MapActivity extends AppCompatActivity {
         salads.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Salads.class));
+                startActivity (new Intent ( MapActivity.this, Recycler.class));
 
             }
         });
         soups.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Soups.class));
+                startActivity (new Intent ( MapActivity.this, Recycler.class));
 
             }
         });
         starters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Starters.class));
+                startActivity (new Intent ( MapActivity.this, Recycler.class));
 
             }
         });
         main_dishes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, M_dishes.class));
+                startActivity (new Intent ( MapActivity.this, Recycler.class));
 
             }
         });
         deserts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Deserts.class));
+                startActivity (new Intent ( MapActivity.this, Recycler.class));
 
             }
         });
         beverages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Beverages.class));
+                startActivity (new Intent ( MapActivity.this, Recycler.class));
 
             }
         });
         bakery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Bakery.class));
+                startActivity (new Intent ( MapActivity.this, Recycler.class));
 
             }
         });
