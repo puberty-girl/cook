@@ -51,7 +51,7 @@ public class MapActivity extends AppCompatActivity {
         salads.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_type", 1));
 
             }
         });
@@ -65,35 +65,35 @@ public class MapActivity extends AppCompatActivity {
         starters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_type", 3));
 
             }
         });
         main_dishes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_type", 4));
 
             }
         });
         deserts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_type", 5));
 
             }
         });
         beverages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_type", 6));
 
             }
         });
         bakery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_type", 7));
 
             }
         });
