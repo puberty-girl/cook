@@ -102,7 +102,7 @@ public class MapActivity extends AppCompatActivity {
     }
 
         public static String TAG = "dataLogs";
-        TextView myText;
+        //TextView myText;
        /* @Override
         protected void onCreate (Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
@@ -120,9 +120,9 @@ public class MapActivity extends AppCompatActivity {
                 public void onResponse(Call<Recipes> call, Response<Recipes> response) {
                     if (response.isSuccessful()) {
                         Recipes recipe = response.body();
-                        myText.setText(recipe.getName());
+                        //myText.setText(recipe.getName());
 
-                        Log.d(TAG, "response Id:" + recipe.getId() + " Name:" + recipe.getName() + " Time:" + recipe.getId_type());
+                        Log.d(TAG, "response Id:" + recipe.getId() + " Name:" + recipe.getName() + " Id_type:" + recipe.getId_type());
                     } else {
                         Log.d(TAG, "response code " + response.code());
                     }

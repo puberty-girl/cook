@@ -19,6 +19,7 @@
         <activity android:name=".Salads" />
         <activity android:name=".What_to_cook" />
         <activity android:name=".MapActivity" />
+        <activity android:name=".Models.Recycler" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -76,6 +76,7 @@ public class Recycler extends AppCompatActivity {
 
 
 
+
                 //    Log.d(TAG, "response Id:" + recipe.getId() + " Name:" + recipe.getName() + " Time:" + recipe.getId_type());
                 } else {
                     Log.d(TAG, "response code " + response.code());
