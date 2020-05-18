@@ -6,6 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.util.Log;
+import android.widget.TextView;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import com.example.cook2.Models.Recycler;
 
@@ -20,8 +26,10 @@ public class MapActivity extends AppCompatActivity {
     Button beverages;
     Button bakery;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         what_cook = findViewById(R.id.what_cook);
@@ -36,58 +44,98 @@ public class MapActivity extends AppCompatActivity {
         what_cook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, What_to_cook.class));
+                startActivity(new Intent(MapActivity.this, What_to_cook.class));
 
             }
         });
         salads.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class));
 
             }
         });
         soups.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_type", 2));
 
             }
         });
         starters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class));
 
             }
         });
         main_dishes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class));
 
             }
         });
         deserts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class));
 
             }
         });
         beverages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class));
 
             }
         });
         bakery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity (new Intent ( MapActivity.this, Recycler.class));
+                startActivity(new Intent(MapActivity.this, Recycler.class));
 
             }
         });
+
+        downloadData(SingleRetrofit.getInstance().createApiSample(), 1);
     }
+
+        public static String TAG = "dataLogs";
+        TextView myText;
+       /* @Override
+        protected void onCreate (Bundle savedInstanceState){
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            myText = findViewById(R.id.txt);
+            downloadData(SingleRetrofit.getInstance().createApiSample(), 1);
+
+        }*/
+       public void downloadData (RecipesApi recipesApi, int id){
+
+            Call<Recipes> recipes = recipesApi.recipe(id);
+
+            recipes.enqueue(new Callback<Recipes>() {
+                @Override
+                public void onResponse(Call<Recipes> call, Response<Recipes> response) {
+                    if (response.isSuccessful()) {
+                        Recipes recipe = response.body();
+                        myText.setText(recipe.getName());
+
+                        Log.d(TAG, "response Id:" + recipe.getId() + " Name:" + recipe.getName() + " Time:" + recipe.getId_type());
+                    } else {
+                        Log.d(TAG, "response code " + response.code());
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Recipes> call, Throwable t) {
+                    Log.d(TAG, "failure " + t);
+                }
+            });
+        }
+
+
+
+
 }
