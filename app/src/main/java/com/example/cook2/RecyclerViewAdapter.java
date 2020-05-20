@@ -16,18 +16,23 @@ import com.bumptech.glide.Glide;
 import com.example.cook2.R;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private static final String TAG = "RecyclerViewAdapter";
 
-    private ArrayList<String> mImageNames = new ArrayList<>();
-    private ArrayList<String> mImages = new ArrayList<>();
-    private Context mContext;
+    private List<Recipes> mRecipes = new ArrayList<>();
 
-    public RecyclerViewAdapter (Context context, ArrayList<String> imageNames, ArrayList<String> images ){
-        mImageNames= imageNames;
-        mImages = images;
-        mContext = context;
+
+    public void setItems(List<Recipes> recipes) {
+        mRecipes.addAll(recipes);
+        notifyDataSetChanged();
+    }
+
+    public void clearItems() {
+        mRecipes.clear();
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -41,20 +46,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.d( TAG, "onBindViewHolder: called.");
-        Glide.with (mContext).asBitmap().load(mImages.get(position))//откуда идет
-                .into(holder.image);//куда идет (в листайтем)
-        holder.imageName.setText(mImageNames.get(position));
-        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d( TAG, "onClick: clicker on:" + mImageNames.get(position));
-            }
-        });
+        holder.bind(mRecipes.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return mImageNames.size();
+        return mRecipes.size();
     } //кол-во объектов в листайтеме
 
     public class  ViewHolder extends RecyclerView.ViewHolder{
@@ -67,6 +64,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             image=itemView.findViewById(R.id.image);
             imageName=itemView.findViewById(R.id.image_name);
             parentLayout=itemView.findViewById(R.id.parent_layout);
+        }
+
+        public void bind(Recipes recipes) {
+            imageName.setText(recipes.getName());
+            Glide.with (itemView.getContext()).asBitmap().load(recipes.getImage())//откуда идет
+                    .into(image);
+            String photoUrl = recipes.getImage();
+            image.setVisibility(photoUrl != null ? View.VISIBLE : View.GONE);
         }
     }
 }

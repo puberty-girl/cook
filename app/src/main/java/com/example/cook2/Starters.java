@@ -12,7 +12,6 @@ import java.util.ArrayList;
 
 public class Starters extends AppCompatActivity {
     private static final String TAG = "Starters";
-    //vars
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
 
@@ -40,9 +39,9 @@ public class Starters extends AppCompatActivity {
     private void initRecyclerView(){
         Log.d (TAG, "initRecyclerView: init recyclerview.");
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter (this, mNames, mImageUrls);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        RecyclerViewAdapter adapter = new RecyclerViewAdapter (this, mNames, mImageUrls);
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 

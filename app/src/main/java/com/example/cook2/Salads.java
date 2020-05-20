@@ -42,9 +42,9 @@ public class Salads extends AppCompatActivity {
     private void initRecyclerView(){
         Log.d (TAG, "initRecyclerView: init recyclerview.");
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter (this, mNames, mImageUrls);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+       // RecyclerViewAdapter adapter = new RecyclerViewAdapter (this, mNames, mImageUrls);
+       // recyclerView.setAdapter(adapter);
+       // recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 
