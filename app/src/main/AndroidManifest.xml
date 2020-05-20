@@ -21,6 +21,7 @@
         <activity android:name=".What_to_cook" />
         <activity android:name=".MapActivity" />
         <activity android:name=".Recycler" />
+        <activity android:name=".RecipesActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

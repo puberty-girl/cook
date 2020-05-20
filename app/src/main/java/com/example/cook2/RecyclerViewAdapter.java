@@ -1,6 +1,5 @@
 package com.example.cook2;
 
-import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,17 +12,22 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.cook2.R;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private static final String TAG = "RecyclerViewAdapter";
 
     private List<Recipes> mRecipes = new ArrayList<>();
+    private OnRecipesListener mOnRecipesListener;
 
+    public RecyclerViewAdapter(OnRecipesListener mOnRecipesListener) {
+        this.mOnRecipesListener = mOnRecipesListener;
+    }
+
+    public RecyclerViewAdapter() {
+    }
 
     public void setItems(List<Recipes> recipes) {
         mRecipes.addAll(recipes);
@@ -39,7 +43,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem, parent, false);
-        ViewHolder holder = new ViewHolder(view);
+        ViewHolder holder = new ViewHolder(view, mOnRecipesListener);
         return holder;
     }
 
@@ -54,16 +58,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return mRecipes.size();
     } //кол-во объектов в листайтеме
 
-    public class  ViewHolder extends RecyclerView.ViewHolder{
+    public class  ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         ImageView image ;
         TextView imageName;
         RelativeLayout parentLayout;
-        public ViewHolder(@NonNull View itemView) {
+        OnRecipesListener mOnRecipesListener;
+        public ViewHolder(@NonNull View itemView, OnRecipesListener onRecipesListener) {
             super(itemView);
             image=itemView.findViewById(R.id.image);
             imageName=itemView.findViewById(R.id.image_name);
             parentLayout=itemView.findViewById(R.id.parent_layout);
+            mOnRecipesListener = onRecipesListener;
+            itemView.setOnClickListener(this);
         }
 
         public void bind(Recipes recipes) {
@@ -73,5 +80,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             String photoUrl = recipes.getImage();
             image.setVisibility(photoUrl != null ? View.VISIBLE : View.GONE);
         }
+
+        @Override
+        public void onClick(View v) {
+            Log.d(TAG, "onClick: " + getAdapterPosition());
+            mOnRecipesListener.onRecipesClick(getAdapterPosition());
+        }
+    }
+
+    public interface OnRecipesListener {
+        void onRecipesClick(int position);
     }
 }
