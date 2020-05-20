@@ -59,7 +59,6 @@ public class MapActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_type", 2));
-
             }
         });
         starters.setOnClickListener(new View.OnClickListener() {
