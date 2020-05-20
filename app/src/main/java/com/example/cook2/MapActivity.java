@@ -13,7 +13,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import com.example.cook2.Models.Recycler;
+import com.example.cook2.Recycler;
 
 public class MapActivity extends AppCompatActivity {
 
@@ -72,7 +72,7 @@ public class MapActivity extends AppCompatActivity {
         main_dishes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_type", 4));
+                startActivity(new Intent(MapActivity.this, M_dishes.class).putExtra("id_type", 4));
 
             }
         });
