@@ -1,4 +1,4 @@
-package com.example.cook2.Models;
+package com.example.cook2;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.cook2.Models.RecyclerViewAdapter;
+import com.example.cook2.RecyclerViewAdapter;
 import com.example.cook2.R;
 import com.example.cook2.Recipes;
 import com.example.cook2.RecipesApi;

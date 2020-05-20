@@ -1,4 +1,4 @@
-package com.example.cook2.Models;
+package com.example.cook2;
 
 import android.content.Context;
 import android.util.Log;
@@ -41,7 +41,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.d( TAG, "onBindViewHolder: called.");
-        Glide.with (mContext).asBitmap().load(mImages.get(position)).into(holder.image);
+        Glide.with (mContext).asBitmap().load(mImages.get(position))//откуда идет
+                .into(holder.image);//куда идет (в листайтем)
         holder.imageName.setText(mImageNames.get(position));
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +55,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public int getItemCount() {
         return mImageNames.size();
-    }
+    } //кол-во объектов в листайтеме
 
     public class  ViewHolder extends RecyclerView.ViewHolder{
 
