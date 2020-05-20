@@ -98,7 +98,7 @@ public class MapActivity extends AppCompatActivity {
             }
         });
 
-        downloadData(SingleRetrofit.getInstance().createApiSample(), 1);
+
     }
 
         public static String TAG = "dataLogs";
