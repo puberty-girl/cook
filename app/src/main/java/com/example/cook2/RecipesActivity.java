@@ -14,6 +14,7 @@ import retrofit2.Response;
 
 public class RecipesActivity extends AppCompatActivity {
 
+    //TODO Recipes
     private  static String TAG = "RecipesActivityCheck";
     Recipes recipe;
     private  int id;
