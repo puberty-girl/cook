@@ -7,8 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-
-import com.example.cook2.Models.RecyclerViewAdapter;
+import com.example.cook2.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 
