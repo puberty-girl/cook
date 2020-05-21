@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //проверяем есть ли файл
         setContentView(R.layout.activity_main);
         btnSignIn = findViewById(R.id.btnSignIn);
         btnRegister = findViewById(R.id.btnRegister);
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
+                                        //Создаем файл
                                       startActivity(new Intent(MainActivity.this, MapActivity.class));
                                       //finish();
                                     }
