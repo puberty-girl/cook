@@ -60,7 +60,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class  ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        ImageView image ;
+        ImageView image;
         TextView imageName;
         RelativeLayout parentLayout;
         OnRecipesListener mOnRecipesListener;

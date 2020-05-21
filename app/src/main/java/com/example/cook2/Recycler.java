@@ -15,6 +15,7 @@ import com.example.cook2.R;
 import com.example.cook2.Recipes;
 import com.example.cook2.RecipesApi;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,7 +84,10 @@ public class Recycler extends AppCompatActivity implements RecyclerViewAdapter.O
     @Override
     public void onRecipesClick(int position) {
         Log.d(TAG, "postion " + recipesList.get(position).getName());
-        Intent intent = new Intent(this, RecipesActivity.class).putExtra("id", recipesList.get(position).getId());
+        Intent intent = new Intent(this, RecipesActivity.class)
+                .putExtra("image", recipesList.get(position).getImage())
+                .putExtra("title", recipesList.get(position).getName())
+                .putExtra("description", recipesList.get(position).getDesciption());
         startActivity(intent);
     }
 }

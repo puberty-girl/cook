@@ -5,7 +5,7 @@ public class Recipes {
     private Integer id_type;
     private String name;
     private String image;
-    private String desciption;
+    private String description;
 
     public Integer getId() { return id;}
     public void setId(Integer id) { this.id = id;}
@@ -19,6 +19,6 @@ public class Recipes {
     public String getImage() { return image;}
     public void setImage (String image) { this.image = image;}
 
-    public String getDesciption() { return desciption;}
-    public void setDesciption (String desciption) { this.desciption = desciption;}
+    public String getDesciption() { return description;}
+    public void setDesciption (String description) { this.description = description;}
 }
