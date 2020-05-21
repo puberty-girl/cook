@@ -11,12 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Bakery"></activity>
-        <activity android:name=".Beverages" />
-        <activity android:name=".Deserts" />
         <activity android:name=".M_dishes" />
-        <activity android:name=".Starters" />
-        <activity android:name=".Soups" />
         <activity android:name=".Salads" />
         <activity android:name=".What_to_cook" />
         <activity android:name=".MapActivity" />

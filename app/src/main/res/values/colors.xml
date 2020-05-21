@@ -3,6 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="btn_sign_in">#ffaa00</color>
+    <color name="btn_sign_in">#DDA15E</color>
+    <color name="ripple">#BC6C25</color>
     <color name="btn_sign_in_stroke">#21211c</color>
 </resources>
