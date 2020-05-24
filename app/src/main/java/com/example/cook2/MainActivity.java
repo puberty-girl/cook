@@ -23,6 +23,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnSignIn, btnRegister;
@@ -36,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //проверяем есть ли файл
+        if (file.exists() ) {new Intent(MainActivity.this, MapActivity.class)};
         setContentView(R.layout.activity_main);
         btnSignIn = findViewById(R.id.btnSignIn);
         btnRegister = findViewById(R.id.btnRegister);
@@ -100,7 +106,15 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
                                         //Создаем файл
-                                      startActivity(new Intent(MainActivity.this, MapActivity.class));
+                                        try {
+                                            File file = new File("d:/testfiles.txt");
+                                            PrintWriter writer = new PrintWriter(new FileWriter(file));
+                                            writer.printf("%x", 255); //Записываем текст в файл
+                                            writer.close(); // Закрываем файл
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
+                                        startActivity(new Intent(MainActivity.this, MapActivity.class));
                                       //finish();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
