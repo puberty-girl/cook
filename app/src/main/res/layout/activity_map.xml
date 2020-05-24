@@ -14,31 +14,40 @@
             android:layout_height="170dp"
             android:text="Избранные рецепты"
             tools:layout_editor_absoluteX="66dp"
-            tools:layout_editor_absoluteY="179dp" />
+            tools:layout_editor_absoluteY="179dp"
+            />
 
-        <Button
+        <ImageButton
             android:id="@+id/salads"
             android:layout_width="205dp"
             android:layout_height="170dp"
             android:text="Салаты"
             tools:layout_editor_absoluteX="66dp"
-            tools:layout_editor_absoluteY="78dp" />
+            tools:layout_editor_absoluteY="78dp"
+            android:src="@drawable/salad"
+            android:contentDescription="TODO"
+            />
     </TableRow>
     <TableRow android:padding="5dp">
 
-        <Button
+        <ImageButton
             android:id="@+id/soups"
             android:layout_width="wrap_content"
             android:layout_height="170dp"
             android:text="Супы"
             tools:layout_editor_absoluteX="244dp"
-            tools:layout_editor_absoluteY="78dp" />
+            tools:layout_editor_absoluteY="78dp"
+            android:src="@drawable/soup"
+            android:contentDescription="TODO"
+            />
 
-        <Button
+        <ImageButton
             android:id="@+id/starters"
             android:layout_width="wrap_content"
             android:layout_height="170dp"
             android:text="Завтраки"
+            android:src="@drawable/breakfast"
+            android:contentDescription="TODO"
             />
     </TableRow>
 
@@ -47,40 +56,48 @@
         android:layout_height="match_parent"
         android:padding="5dp">
 
-        <Button
+        <ImageButton
             android:id="@+id/main_dishes"
             android:layout_width="wrap_content"
             android:layout_height="170dp"
             android:text="Горячее"
             tools:layout_editor_absoluteX="64dp"
-            tools:layout_editor_absoluteY="279dp" />
+            tools:layout_editor_absoluteY="279dp"
+            android:src="@drawable/breakfast2"
+            android:contentDescription="TODO" />
 
-        <Button
+        <ImageButton
             android:id="@+id/deserts"
             android:layout_width="wrap_content"
             android:layout_height="170dp"
             android:text="Десерты"
             tools:layout_editor_absoluteX="250dp"
-            tools:layout_editor_absoluteY="294dp" />
+            tools:layout_editor_absoluteY="294dp"
+            android:src="@drawable/cupcake"
+            android:contentDescription="TODO"/>
     </TableRow>
 
     <TableRow android:padding="5dp">
 
-        <Button
+        <ImageButton
             android:id="@+id/beverages"
             android:layout_width="wrap_content"
             android:layout_height="170dp"
+            android:src="@drawable/drink"
             android:text="Напитки"
             tools:layout_editor_absoluteX="73dp"
-            tools:layout_editor_absoluteY="389dp" />
+            tools:layout_editor_absoluteY="389dp"
+            android:contentDescription="TODO"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/bakery"
             android:layout_width="wrap_content"
             android:layout_height="170dp"
             android:text="Выпечка"
             tools:layout_editor_absoluteX="246dp"
-            tools:layout_editor_absoluteY="389dp" />
+            tools:layout_editor_absoluteY="389dp"
+            android:src="@drawable/waffels"
+            android:contentDescription="TODO"/>
     </TableRow>
 </TableLayout>
 

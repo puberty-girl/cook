@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import retrofit2.Call;
@@ -18,13 +19,13 @@ import com.example.cook2.Recycler;
 public class MapActivity extends AppCompatActivity {
 
     Button what_cook;
-    Button salads;
-    Button soups;
-    Button starters;
-    Button main_dishes;
-    Button deserts;
-    Button beverages;
-    Button bakery;
+    ImageButton salads;
+    ImageButton soups;
+    ImageButton starters;
+    ImageButton main_dishes;
+    ImageButton deserts;
+    ImageButton beverages;
+    ImageButton bakery;
 
 
     @Override
