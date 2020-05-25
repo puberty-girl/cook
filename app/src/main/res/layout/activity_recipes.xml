@@ -27,14 +27,15 @@
         android:layout_weight="1"
         android:paddingLeft="10dp"
         android:text="TextView"
-        android:textSize="50dp" />
+        android:textSize="40dp" />
     <TextView
         android:id="@+id/myTxt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="TextView"
-        android:textSize="20dp"
+        android:textSize="25dp"
+        android:paddingLeft="10dp"
         android:layout_below="@id/myTxt"/>
     </LinearLayout>
 
