@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //проверяем есть ли файл
-        if (file.exists() ) {new Intent(MainActivity.this, MapActivity.class)};
+        File file = new File("testfiles.txt");
+        if (file.exists() ) {new Intent(MainActivity.this, MapActivity.class);};
         setContentView(R.layout.activity_main);
         btnSignIn = findViewById(R.id.btnSignIn);
         btnRegister = findViewById(R.id.btnRegister);
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                                     public void onSuccess(AuthResult authResult) {
                                         //Создаем файл
                                         try {
-                                            File file = new File("d:/testfiles.txt");
+                                            File file = new File("testfiles.txt");
                                             PrintWriter writer = new PrintWriter(new FileWriter(file));
                                             writer.printf("%x", 255); //Записываем текст в файл
                                             writer.close(); // Закрываем файл
