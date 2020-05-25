@@ -30,7 +30,7 @@ public class RecipesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
         myText = findViewById(R.id.myTxt);
-        myText = findViewById(R.id.myTxt2);
+        myText2 = findViewById(R.id.myTxt2);
         image=findViewById(R.id.image);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {

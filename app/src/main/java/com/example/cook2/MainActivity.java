@@ -34,14 +34,13 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseDatabase db;
     DatabaseReference users;
-
     RelativeLayout root;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //проверяем есть ли файл
-        File file = new File("testfiles.txt");
+        File file = new File(this.getFilesDir(), "testfiles.txt");
         if (file.exists() ) {new Intent(MainActivity.this, MapActivity.class);};
         setContentView(R.layout.activity_main);
         btnSignIn = findViewById(R.id.btnSignIn);
@@ -109,9 +108,10 @@ public class MainActivity extends AppCompatActivity {
                                         //Создаем файл
                                         try {
                                             File file = new File("testfiles.txt");
-                                            PrintWriter writer = new PrintWriter(new FileWriter(file));
-                                            writer.printf("%x", 255); //Записываем текст в файл
-                                            writer.close(); // Закрываем файл
+                                            file.createNewFile();
+                                           // PrintWriter writer = new PrintWriter("testfiles.txt");
+                                           // writer.printf("%x", 255); //Записываем текст в файл
+                                            //writer.close(); // Закрываем файл
                                         } catch (IOException e) {
                                             e.printStackTrace();
                                         }
