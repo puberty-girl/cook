@@ -5,19 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MapActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/back">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <Button
+        <ImageButton
             android:id="@+id/what_cook"
             android:layout_width="205dp"
             android:layout_height="170dp"
             android:text="Избранные рецепты"
             tools:layout_editor_absoluteX="66dp"
             tools:layout_editor_absoluteY="179dp"
+            android:src="@drawable/favourite"
             />
 
         <ImageButton
@@ -73,7 +75,7 @@
             android:text="Горячее"
             tools:layout_editor_absoluteX="64dp"
             tools:layout_editor_absoluteY="279dp"
-            android:src="@drawable/breakfast2"
+            android:src="@drawable/m_dish"
             android:contentDescription="TODO"
             android:layout_below="@id/soups"
             android:layout_weight="1"/>

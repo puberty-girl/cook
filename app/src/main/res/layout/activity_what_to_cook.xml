@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".What_to_cook">
+    tools:context=".What_to_cook"
+    android:background="@drawable/working">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

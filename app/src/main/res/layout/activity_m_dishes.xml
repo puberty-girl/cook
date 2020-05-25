@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,38 +7,51 @@
     tools:context=".M_dishes"
     android:background="@color/back"
     android:padding="16dp"
+    android:orientation="vertical"
     >
-
-    <Button
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageButton
         android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="185dp"
         android:layout_weight="1"
-        android:text="Бургеры" />
+        android:text="Бургеры"
+        android:src="@drawable/burger"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="185dp"
         android:layout_weight="1"
         android:layout_below="@+id/button"
-        android:text="Мясо, птица" />
+        android:text="Мясо, птица"
+        android:src="@drawable/meat"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageButton
+        android:id="@+id/button3"
+        android:layout_width="210dp"
+        android:layout_height="185dp"
         android:layout_weight="1"
         android:layout_below="@+id/button2"
+        android:src="@drawable/pasta"
         android:text="Паста" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="185dp"
         android:layout_weight="1"
         android:layout_below="@+id/button3"
+        android:src="@drawable/veg"
         android:text="Вегетарианское" />
+    </LinearLayout>
 
-
-</RelativeLayout>
+</LinearLayout>
