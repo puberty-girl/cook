@@ -6,12 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class M_dishes extends AppCompatActivity {
-    Button burger;
-    Button meat;
-    Button pasta;
-    Button veg;
+    ImageButton burger;
+    ImageButton meat;
+    ImageButton pasta;
+    ImageButton veg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
