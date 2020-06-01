@@ -18,7 +18,7 @@ import com.example.cook2.Recycler;
 
 public class MapActivity extends AppCompatActivity {
 
-    Button what_cook;
+    ImageButton what_cook;
     ImageButton salads;
     ImageButton soups;
     ImageButton starters;
