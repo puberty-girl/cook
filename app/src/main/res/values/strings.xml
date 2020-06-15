@@ -5,4 +5,6 @@
     <string name="text_bottom">Войдите в свою учетную запись</string>
     <string name="btnSignIn">Войти</string>
     <string name="btnRegister">Зарегестрироваться</string>
+    <string name="facebook_app_id">623683578248173</string>
+    <string name="fb_login_protocol_scheme">fb623683578248173</string>
 </resources>
