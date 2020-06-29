@@ -19,6 +19,14 @@
         android:layout_height="302dp"
         android:src="@mipmap/ic_launcher" />
 
+        <ToggleButton
+            android:id="@+id/favourite"
+            android:layout_width="94dp"
+            android:layout_height="85dp"
+            android:background="@drawable/pink_heart"
+            android:gravity="left|center_vertical"
+            android:onClick="onToggleButtonClick"
+            android:padding="10dp" />
     <TextView
         android:id="@+id/myTxt"
         android:layout_width="match_parent"
