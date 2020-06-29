@@ -22,7 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RecipesActivity extends AppCompatActivity {
+public class RecipesActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 
     //TODO Recipes
     private  static String TAG = "RecipesActivityCheck";
@@ -30,6 +30,7 @@ public class RecipesActivity extends AppCompatActivity {
     private  String title, description, imageString;
     TextView myText;
     TextView myText2;
+    ToggleButton toogleButton;
     ImageView image;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +40,8 @@ public class RecipesActivity extends AppCompatActivity {
         myText = findViewById(R.id.myTxt);
         myText2 = findViewById(R.id.myTxt2);
         image=findViewById(R.id.image);
+        toogleButton = findViewById(R.id.favourite);
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             title = extras.getString("title");
@@ -51,9 +54,26 @@ public class RecipesActivity extends AppCompatActivity {
         myText2.setText(description);
         Glide.with(getApplicationContext()).asBitmap().load(imageString)//откуда идет
                 .into(image);
+
+        toogleButton.setOnCheckedChangeListener(this);
+
+      /*  toogleButton.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+            }
+        });*/
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
     }
 
 
+
+    /*
     public class ToggleButtonDemoActivity extends Activity implements
             CompoundButton.OnCheckedChangeListener {
 
@@ -73,10 +93,14 @@ public class RecipesActivity extends AppCompatActivity {
 
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+        }
+
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             if (isChecked)
                 //добавляем в бд
             else
                 //добавляем в бд
-        }
-    }
+    }*/
 }

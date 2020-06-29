@@ -25,8 +25,9 @@
             android:layout_height="85dp"
             android:background="@drawable/pink_heart"
             android:gravity="left|center_vertical"
-            android:onClick="onToggleButtonClick"
             android:padding="10dp" />
+
+        <!-- android:onClick="onToggleButtonClick"-->
     <TextView
         android:id="@+id/myTxt"
         android:layout_width="match_parent"
