@@ -19,6 +19,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,7 +36,9 @@ public class RecipesActivity extends AppCompatActivity implements CompoundButton
     //TODO Recipes
     private  static String TAG = "RecipesActivityCheck";
     Recipes recipe;
-    private  String title, description, imageString;
+    private String title, description, imageString;
+    FirebaseFirestore db;
+    private int id;
     TextView myText;
     TextView myText2;
     ToggleButton toogleButton;
@@ -46,12 +52,14 @@ public class RecipesActivity extends AppCompatActivity implements CompoundButton
         myText2 = findViewById(R.id.myTxt2);
         image=findViewById(R.id.image);
         toogleButton = findViewById(R.id.favourite);
+        db = FirebaseStoreData.getmFirestore();
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             title = extras.getString("title");
             imageString = extras.getString("image");
             description = extras.getString("description");
+            id = extras.getInt("id");
         }
         myText.setText(title);
         Glide.with(getApplicationContext()).asBitmap().load(imageString)//откуда идет

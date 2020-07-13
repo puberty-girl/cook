@@ -27,6 +27,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.io.File;
@@ -59,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         db = FirebaseDatabase.getInstance();
+        FirebaseStoreData.setmFirestore(FirebaseFirestore.getInstance());
+
         users = db.getReference("Users");
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +127,8 @@ public class MainActivity extends AppCompatActivity {
                                         } catch (IOException e) {
                                             e.printStackTrace();
                                         }
+                                        String key = auth.getUid(); //TODO возможно токен
+                                        UserInfo.setUserKey(key);
                                         startActivity(new Intent(MainActivity.this, MapActivity.class));
                                       //finish();
                                     }

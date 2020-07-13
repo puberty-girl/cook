@@ -45,7 +45,7 @@ public class MapActivity extends AppCompatActivity {
         what_cook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MapActivity.this, Recycler.class)); //что писать в пут экстра?
+                startActivity(new Intent(MapActivity.this, Recycler.class).putExtra("id_user", UserInfo.getUserKey())); //что писать в пут экстра?
 
             }
         });
