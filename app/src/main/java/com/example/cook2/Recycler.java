@@ -87,7 +87,8 @@ public class Recycler extends AppCompatActivity implements RecyclerViewAdapter.O
         Intent intent = new Intent(this, RecipesActivity.class)
                 .putExtra("image", recipesList.get(position).getImage())
                 .putExtra("title", recipesList.get(position).getName())
-                .putExtra("description", recipesList.get(position).getDesciption());
+                .putExtra("description", recipesList.get(position).getDesciption())
+                .putExtra("id", recipesList.get(position).getId());
         startActivity(intent);
     }
 }
